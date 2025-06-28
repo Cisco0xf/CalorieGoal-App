@@ -1,0 +1,22 @@
+[
+    {
+        "food_name": "Broccoli",
+        "calories": 55,
+        "image_url": "https://cdn.britannica.com/25/78225-050-1781F6B7/broccoli-florets.jpg"
+    },
+    {
+        "food_name": "Spinach",
+        "calories": 23,
+        "image_url": "https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=650%2Cq=40%2Csharpen=1%2Cwidth=956/wp-content/uploads/fresh-spinach-day.jpg"
+    },
+    {
+        "food_name": "Carrot",
+        "calories": 41,
+        "image_url": "https://cdn11.bigcommerce.com/s-kc25pb94dz/images/stencil/1280x1280/products/271/762/Carrot__40927.1634584458.jpg?c=2"
+    },
+    {
+        "food_name": "Bell Pepper",
+        "calories": 31,
+        "image_url": "https://i5.walmartimages.com/asr/5d3ca3f5-69fa-436a-8a73-ac05713d3c2c.7b334b05a184b1eafbda57c08c6b8ccf.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+    }
+]

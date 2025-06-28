@@ -1,0 +1,22 @@
+[
+    {
+        "food_name": "Brown Rice",
+        "calories": 111,
+        "image_url": "https://assets-jpcust.jwpsrv.com/thumbnails/k98gi2ri-720.jpg"
+    },
+    {
+        "food_name": "Oats",
+        "calories": 389,
+        "image_url": "https://media.post.rvohealth.io/wp-content/uploads/2020/03/oats-oatmeal-732x549-thumbnail.jpg"
+    },
+    {
+        "food_name": "Sweet Corn",
+        "calories": 86,
+        "image_url": "https://m.media-amazon.com/images/I/41F62-VbHSL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+        "food_name": "Black Beans",
+        "calories": 132,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwxSM9Ib-aDXTUIATZlRPQ6qABkkJ0sJwDmA&usqp=CAU"
+    }
+]

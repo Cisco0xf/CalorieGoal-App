@@ -1,0 +1,22 @@
+[
+    {
+        "food_name": "Chicken Breast",
+        "calories": 165,
+        "image_url": "https://www.savorynothings.com/wp-content/uploads/2021/02/airy-fryer-chicken-breast-image-8.jpg"
+    },
+    {
+        "food_name": "Salmon",
+        "calories": 206,
+        "image_url": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2F2023-04-baked-salmon-how-to%2Fbaked-salmon-step6-4792"
+    },
+    {
+        "food_name": "Lean Beef",
+        "calories": 250,
+        "image_url": "https://www.mashed.com/img/gallery/the-truth-about-lean-beef/l-intro-1621886574.jpg"
+    },
+    {
+        "food_name": "Turkey",
+        "calories": 135,
+        "image_url": "https://fox59.com/wp-content/uploads/sites/21/2022/11/white-meat.jpg?w=2560&h=1440&crop=1"
+    }
+]
