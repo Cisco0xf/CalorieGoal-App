@@ -1,9 +1,10 @@
 import 'package:flowapp/commoms/app_dimensions.dart';
-import 'package:flowapp/commoms/gaps.dart';
 import 'package:flowapp/commoms/navigator_key.dart';
 import 'package:flowapp/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:toastification/toastification.dart';
+
+final BuildContext context  = navigatorKey.currentContext as BuildContext;
 
 BorderRadius borderRadius([double radius = 15.0]) {
   return BorderRadius.circular(radius);

@@ -8,139 +8,31 @@ import 'package:flowapp/state_management_layer/manage_user_detials/user_gender.d
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class SelectGender extends ConsumerWidget {
-  const SelectGender({super.key});
+class CustomGenderSelector extends ConsumerWidget {
+  const CustomGenderSelector({super.key});
+
+  String currentLable(Gender? currentGender) {
+    final Map<Gender?, String> genderlables = {
+      Gender.male: "Male",
+      Gender.female: "Female",
+    };
+
+    final String target = genderlables[currentGender] ?? gender;
+
+    return target;
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final Gender? currentGender = ref.watch(genderProvider);
-
-    return Column(
-      children: [
-        gapH(0.02),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            gapW(0.05),
-            const Text(
-              "Gender",
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: AppColors.subTextColor,
-              ),
-            ),
-          ],
-        ),
-        gapH(),
-        SizedBox(
-          width: context.screenWidth * .9,
-          child: ButtonTheme(
-            alignedDropdown: true,
-            padding: padding(0.0),
-            child: DropdownButtonFormField<Gender?>(
-              value: currentGender,
-              padding: padding(0.0),
-              decoration: InputDecoration(
-                fillColor: AppColors.whiteColor,
-                filled: true,
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: borderRadius(12.0),
-                  borderSide: const BorderSide(
-                    color: AppColors.borderColor,
-                    width: 1.0,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: borderRadius(12.0),
-                  borderSide: const BorderSide(
-                    color: AppColors.borderColor,
-                    width: 1.0,
-                  ),
-                ),
-              ),
-              hint: const Text(gender),
-              borderRadius: borderRadius(12.0),
-              icon: const Icon(Icons.keyboard_arrow_down_rounded),
-              items: <DropdownMenuItem<Gender?>>[
-                for (int i = 0; i < Gender.values.length; i++) ...{
-                  DropdownMenuItem<Gender?>(
-                    value: Gender.values[i],
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: borderRadius(10.0),
-                        color: currentGender == Gender.values[i]
-                            ? Colors.red.withOpacity(0.1)
-                            : null,
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Text(
-                            Gender.values[i] == Gender.male ? "Male" : "Female",
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                }
-              ],
-              onChanged: (Gender? target) {
-                ref.read(genderProvider.notifier).catchSelectedGender(
-                      gender: target!,
-                    );
-              },
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class CustomGenderSelector extends ConsumerStatefulWidget {
-  const CustomGenderSelector({super.key});
-
-  @override
-  ConsumerState<CustomGenderSelector> createState() =>
-      _CustomGenderSelectorState();
-}
-
-class _CustomGenderSelectorState extends ConsumerState<CustomGenderSelector> {
-  Gender? get currentGender => ref.watch(genderProvider);
-
-  String get currentLable {
-    switch (currentGender) {
-      case null:
-        {
-          return gender;
-        }
-      case Gender.male:
-        {
-          return "Male";
-        }
-
-      case Gender.female:
-        {
-          return "Female";
-        }
-
-      default:
-        {
-          return "Can not catch";
-        }
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        gapH(0.02),
-        Row(
+        const Gap(hRatio: 0.02),
+        const Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            gapW(0.05),
-            const Text(
+            Gap(wRatio: 0.05),
+            Text(
               "Gender",
               style: TextStyle(
                 fontSize: 15,
@@ -150,7 +42,7 @@ class _CustomGenderSelectorState extends ConsumerState<CustomGenderSelector> {
             ),
           ],
         ),
-        gapH(),
+        const Gap(hRatio: 0.01),
         Container(
           margin: padding(10.0),
           width: context.screenWidth * .9,
@@ -170,7 +62,7 @@ class _CustomGenderSelectorState extends ConsumerState<CustomGenderSelector> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  currentLable,
+                  currentLable(currentGender),
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: currentGender == null ? null : FontWeight.bold,

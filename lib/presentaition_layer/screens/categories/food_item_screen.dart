@@ -29,7 +29,7 @@ class _FoodCategoryState extends ConsumerState<FoodCategory> {
       children: <Widget>[
         Row(
           children: <Widget>[
-            gapW(0.03),
+            const Gap(wRatio: 0.03),
             Text(
               widget.foodType,
               style: const TextStyle(
@@ -135,7 +135,7 @@ class FoodItem extends ConsumerWidget {
               ),
             ],
           ),
-          gapH(),
+          const Gap(hRatio: 0.01),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

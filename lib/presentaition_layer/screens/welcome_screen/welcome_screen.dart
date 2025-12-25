@@ -23,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
           Positioned(
             child: Column(
               children: <Widget>[
-                gapH(0.08),
+                const Gap(hRatio: 0.08),
                 const Text(
                   appTitle,
                   style: TextStyle(
@@ -41,14 +41,14 @@ class WelcomeScreen extends StatelessWidget {
                     color: AppColors.whiteColor,
                   ),
                 ),
-                gapH(0.02),
+                const Gap(hRatio: 0.02),
                 MainButton(
                   lable: "Order Food",
                   onClick: () {
                     pushTo(target: const UserDetialsScreen());
                   },
                 ),
-                gapH(0.03),
+                const Gap(hRatio: 0.03),
               ],
             ),
           ),

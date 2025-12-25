@@ -38,23 +38,23 @@ class _UserDetialsScreenState extends ConsumerState<UserDetialsScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             /* const SelectGender(),
-            gapH(0.05), */
+            Gap(hRatio: 0.05), */
             const CustomGenderSelector(),
-            gapH(0.03),
+            Gap(hRatio: 0.03),
             DetialsField(
               controller: caloriesCalc.weightController!,
               hintText: weight,
               sufLable: "KG",
               title: "Weight",
             ),
-            gapH(0.03),
+            Gap(hRatio: 0.03),
             DetialsField(
               controller: caloriesCalc.heightController!,
               hintText: height,
               sufLable: "CM",
               title: "Height",
             ),
-            gapH(0.03),
+            Gap(hRatio: 0.03),
             DetialsField(
               controller: caloriesCalc.ageController!,
               hintText: age,
@@ -62,14 +62,14 @@ class _UserDetialsScreenState extends ConsumerState<UserDetialsScreen> {
               title: "Age",
               type: TextInputType.number,
             ),
-            gapH(0.15),
+            Gap(hRatio: 0.15),
             MainButton(
               lable: "Next",
               onClick: () {
                 caloriesCalc.calculateUserCalories;
               },
             ),
-            gapH(0.03),
+            Gap(hRatio: 0.03),
           ],
         ),
       ),

@@ -69,7 +69,7 @@ class FinishOrder extends ConsumerWidget {
               ),
             ],
           ),
-          gapH(0.02),
+          Gap(hRatio: 0.02),
           MainButton(
             lable: "Confirm",
             hasLoading: isLoading,

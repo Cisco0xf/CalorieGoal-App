@@ -75,7 +75,7 @@ class _ProductsScreenState extends ConsumerState<ProductsScreen> {
                   foodData: snapshot.data![2]!,
                   foodType: "Carbs",
                 ),
-                gapH(0.03),
+                Gap(hRatio: 0.03),
               ],
             );
           },

@@ -81,7 +81,7 @@ class PlaceOrder extends ConsumerWidget {
               ),
             ],
           ),
-          gapH(0.02),
+          Gap(hRatio: 0.02),
           Opacity(
             opacity: isButtonActive ? 1.0 : 0.7,
             child: MainButton(

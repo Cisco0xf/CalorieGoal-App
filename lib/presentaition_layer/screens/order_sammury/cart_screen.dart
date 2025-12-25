@@ -140,7 +140,7 @@ class QuantityController extends StatelessWidget {
             child: const Icon(Icons.remove),
           ),
         ),
-        gapW(0.02),
+        const Gap(wRatio:0.02),
         Text(
           "$target",
           style: const TextStyle(
@@ -148,7 +148,7 @@ class QuantityController extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        gapW(0.02),
+        const Gap(wRatio:0.02),
         CircleAvatar(
           backgroundColor: AppColors.buttonsColor,
           child: Clicker(

@@ -38,7 +38,7 @@ class DetialsField extends StatelessWidget {
             )
           ],
         ),
-        gapH(),
+        const Gap(hRatio: 0.01),
         Padding(
           padding: padding(15.0, isH: true),
           child: SizedBox(
