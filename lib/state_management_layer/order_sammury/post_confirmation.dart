@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:flowapp/commoms/commons.dart';
-import 'package:flowapp/data_layer/models/product_model.dart';
+import 'package:flowapp/data_layer/product_model.dart';
 import 'package:flowapp/state_management_layer/order_sammury/cart.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

@@ -2,7 +2,7 @@ import 'package:flowapp/commoms/app_dimensions.dart';
 import 'package:flowapp/commoms/commons.dart';
 import 'package:flowapp/commoms/gaps.dart';
 import 'package:flowapp/constants/colors.dart';
-import 'package:flowapp/data_layer/models/product_model.dart';
+import 'package:flowapp/data_layer/product_model.dart';
 import 'package:flowapp/presentaition_layer/screens/order_sammury/cart_screen.dart';
 import 'package:flowapp/state_management_layer/order_sammury/cart.dart';
 import 'package:flutter/material.dart';

@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flowapp/commoms/commons.dart';
-import 'package:flowapp/data_layer/models/product_model.dart';
+import 'package:flowapp/data_layer/product_model.dart';
 import 'package:flowapp/state_management_layer/manage_user_detials/user_detials.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flowapp/commoms/commons.dart';
 import 'package:flowapp/commoms/gaps.dart';
-import 'package:flowapp/data_layer/models/product_model.dart';
+import 'package:flowapp/data_layer/product_model.dart';
 import 'package:flowapp/presentaition_layer/screens/categories/bottom_data.dart';
 import 'package:flowapp/presentaition_layer/screens/categories/food_item_screen.dart';
 import 'package:flowapp/state_management_layer/catch_data/catch_json_data.dart';
