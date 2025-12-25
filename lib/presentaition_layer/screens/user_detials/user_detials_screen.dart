@@ -40,21 +40,21 @@ class _UserDetialsScreenState extends ConsumerState<UserDetialsScreen> {
             /* const SelectGender(),
             Gap(hRatio: 0.05), */
             const CustomGenderSelector(),
-            Gap(hRatio: 0.03),
+            const Gap(hRatio: 0.03),
             DetialsField(
               controller: caloriesCalc.weightController!,
               hintText: weight,
               sufLable: "KG",
               title: "Weight",
             ),
-            Gap(hRatio: 0.03),
+            const Gap(hRatio: 0.03),
             DetialsField(
               controller: caloriesCalc.heightController!,
               hintText: height,
               sufLable: "CM",
               title: "Height",
             ),
-            Gap(hRatio: 0.03),
+           const  Gap(hRatio: 0.03),
             DetialsField(
               controller: caloriesCalc.ageController!,
               hintText: age,
@@ -62,14 +62,14 @@ class _UserDetialsScreenState extends ConsumerState<UserDetialsScreen> {
               title: "Age",
               type: TextInputType.number,
             ),
-            Gap(hRatio: 0.15),
+            const Gap(hRatio: 0.15),
             MainButton(
               lable: "Next",
               onClick: () {
                 caloriesCalc.calculateUserCalories;
               },
             ),
-            Gap(hRatio: 0.03),
+            const Gap(hRatio: 0.03),
           ],
         ),
       ),

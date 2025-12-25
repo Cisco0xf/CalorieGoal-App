@@ -4,7 +4,7 @@ import 'package:flowapp/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:toastification/toastification.dart';
 
-final BuildContext context  = navigatorKey.currentContext as BuildContext;
+final BuildContext context = navigatorKey.currentContext as BuildContext;
 
 BorderRadius borderRadius([double radius = 15.0]) {
   return BorderRadius.circular(radius);
@@ -39,16 +39,15 @@ class MainButton extends StatelessWidget {
   });
   final void Function() onClick;
   final String lable;
+  
   final double? width;
   final double? height;
 
   final bool isActive;
   final bool hasLoading;
 
-  double get _width =>
-      width == null ? context.screenWidth * .8 : width as double;
-  double get _height =>
-      width == null ? context.screenHeight * .07 : height as double;
+  double get _width => width ?? context.screenWidth * .8;
+  double get _height => height ?? context.screenHeight * 0.07;
 
   @override
   Widget build(BuildContext context) {

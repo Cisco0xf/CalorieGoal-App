@@ -33,6 +33,7 @@ class AppRoot extends StatelessWidget {
           scaffoldBackgroundColor: AppColors.bgColor,
           colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.orange,
+            brightness: Brightness.light, 
           ),
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:flowapp/commoms/app_dimensions.dart';
 import 'package:flowapp/commoms/commons.dart';
 import 'package:flowapp/commoms/gaps.dart';
 import 'package:flowapp/constants/colors.dart';
@@ -20,7 +21,7 @@ class WelcomeScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Positioned(
+          Positioned.fill(
             child: Column(
               children: <Widget>[
                 const Gap(hRatio: 0.08),
@@ -44,6 +45,8 @@ class WelcomeScreen extends StatelessWidget {
                 const Gap(hRatio: 0.02),
                 MainButton(
                   lable: "Order Food",
+                  width: context.screenWidth * .8,
+                  height: context.screenHeight * .07,
                   onClick: () {
                     pushTo(target: const UserDetialsScreen());
                   },
