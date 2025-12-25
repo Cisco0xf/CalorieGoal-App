@@ -11,12 +11,11 @@ class Cart extends StateNotifier<List<ProductModel>> {
   final Ref ref;
 
   void addFoodToCart({required ProductModel product}) {
-    final bool isExistInCart = state.any((item) {
-      return product.name == item.name;
-    });
+    final bool isExistInCart = state.any((item) => product.name == item.name);
 
     if (isExistInCart) {
       log("Item Already Exist in cart");
+      removeFoodFromCart(cartItem: product);
       return;
     }
 

@@ -6,10 +6,9 @@ import 'package:flowapp/state_management_layer/manage_user_detials/user_gender.d
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CaloriesCalculate extends StateNotifier<double> {
-  CaloriesCalculate({required this.ref}) : super(0.0);
-
-  final Ref ref;
+class CaloriesCalculate extends Notifier<double> {
+  @override
+  double build() => 0.0;
 
   TextEditingController? heightController;
   TextEditingController? weightController;
@@ -89,7 +88,7 @@ class CaloriesCalculate extends StateNotifier<double> {
         final double weightCalc = 9.56 * _weight;
         final double heightCalc = 1.85 * _height;
         final double ageCalc = 4.67 * _age;
-        
+
         state = (655.1 + weightCalc + heightCalc) - ageCalc;
 
         log("Genger : Female | Age : $_age | Height : $_height | Weight : $_weight");
@@ -107,8 +106,6 @@ class CaloriesCalculate extends StateNotifier<double> {
   double get userCalories => state;
 }
 
-final caloriesProvider = StateNotifierProvider<CaloriesCalculate, double>(
-  (Ref ref) {
-    return CaloriesCalculate(ref: ref);
-  },
+final caloriesProvider = NotifierProvider<CaloriesCalculate, double>(
+  CaloriesCalculate.new,
 );
